@@ -1,0 +1,40 @@
+<!--
+ * @author: Spring
+ * @create: 2021-05-26 18:05 PM
+ * @license: MIT
+ * @lastAuthor: Spring
+ * @lastEditTime: 2021-05-28 09:56 AM
+ * @desc: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <link rel="stylesheet" href="./icon/iconfont.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/index.css.map" />
+</head>
+<body>
+  <div id="app">
+    <carousel :arr="sideshowArr" ></carousel>
+    <goods :arr="rendergoodsArr" @addshopcar="addshopcar"></goods>
+    <paging :arr="allgoodsArr" @fatherturn="fatherturn"></paging>
+    <shopcar 
+    :arr="shopArr"
+    :allchecked="allchecked"
+    @addreduce="addreduce"
+    @checkedstore="checkedstore"
+    @checkedgoods="checkedgoods"
+    @allcheck="allcheck"
+    @goodsdel="goodsdel"
+    @delall="delall"
+    @delchoose="delchoose"
+    ></shopcar>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
